@@ -5,13 +5,13 @@ public class Goal : MonoBehaviour {
 	
 	void Start() {
 		
-		GameController.instance.RegisterGoal();
+		LevelManager.instance.RegisterGoal();
 		
 	}
 
 	void OnDisable() {
 		
-		GameController.instance.CompleteGoal();
+		LevelManager.instance.CompleteGoal();
 		
 	}
 	

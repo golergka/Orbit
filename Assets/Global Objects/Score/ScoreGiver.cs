@@ -24,7 +24,7 @@ public class ScoreGiver : MonoBehaviour {
 		if (collidedWith.tag != "Ball")
 			return;
 		
-		GameController.instance.AddScore(50, collisionInfo.contacts[0].point);
+		LevelManager.instance.AddScore(50, collisionInfo.contacts[0].point);
 		gifted.Add (collidedWith);
 		
 	}

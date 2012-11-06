@@ -21,7 +21,7 @@ public class ScoreTraveler : MonoBehaviour {
 		if (Time.time - scoringTime >= scoringPeriod) {
 			
 			int bonusScore = Mathf.RoundToInt( scoreSpeed * (transform.position - scoringPosition).magnitude );
-			GameController.instance.AddScore(bonusScore, transform.position);
+			LevelManager.instance.AddScore(bonusScore, transform.position);
 				
 			scoringPosition = transform.position;
 			scoringTime = Time.time;

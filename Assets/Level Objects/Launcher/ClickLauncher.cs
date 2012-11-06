@@ -64,7 +64,7 @@ public class ClickLauncher : MonoBehaviour {
 			launchPower = maxLaunchPower;
 		
 		if (Input.GetMouseButtonUp(0) && gotMouseDown) {
-			if (GameController.instance.gameState == GameController.GameState.Playing)
+			if (LevelManager.instance.gameState == LevelManager.GameState.Playing)
 				Launch ();
 			launchPower = minLaunchPower;
 			gotMouseDown = false;
@@ -80,7 +80,7 @@ public class ClickLauncher : MonoBehaviour {
 	
 	void Launch() {
 		
-		Transform ball = GameController.instance.PopBall();
+		Transform ball = LevelManager.instance.PopBall();
 		if (ball == null)
 			return;
 		Rigidbody newBall = ((Transform) Instantiate(ball, launchPoint.position, Quaternion.identity)).GetComponent<Rigidbody>();

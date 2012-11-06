@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class GameController : MonoBehaviour {
+public class LevelManager : MonoBehaviour {
 	
 	# region Singleton
 	
-	static public GameController instance;
+	static public LevelManager instance;
 	
 	void Awake() {
 		
@@ -129,7 +129,6 @@ public class GameController : MonoBehaviour {
 	
 	#region Winning level
 	
-	public string nextLevel;
 	int goals = 0;
 	int goalsComplete = 0;
 	
@@ -175,7 +174,7 @@ public class GameController : MonoBehaviour {
 			GUI.Label (gameResultRect, gameResultText);
 			
 			if (GUI.Button (new Rect (Screen.width / 2 - 50, Screen.height/2 + 25, 100, 20), "Next level") )
-				Application.LoadLevel(nextLevel);
+				GameManager.instance.NextLevel();
 			
 			break;
 			

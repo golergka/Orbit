@@ -44,9 +44,9 @@ public class PullLauncher : MonoBehaviour {
 		if (!this.enabled)
 			return;
 		
-		Transform newBallPrefab = GameController.instance.PopBall();
+		Transform newBallPrefab = LevelManager.instance.PopBall();
 		if (newBallPrefab == null) {
-			GameController.instance.FailGame();
+			LevelManager.instance.FailGame();
 			return;
 		}
 		

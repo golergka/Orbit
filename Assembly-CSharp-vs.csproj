@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_3_5_6;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_6;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_FLASH;ENABLE_GENERICS</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,14 +44,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GlobalObjects\Score\GameController.cs" />
-     <Compile Include="Assets\GlobalObjects\Score\ScoreGiver.cs" />
-     <Compile Include="Assets\GlobalObjects\Score\ScoreLabel\VanishingLabel.cs" />
-     <Compile Include="Assets\GlobalObjects\Score\ScoreTraveler.cs" />
-     <Compile Include="Assets\LevelObjects\Balls\Ball.cs" />
-     <Compile Include="Assets\LevelObjects\Launcher\ClickLauncher.cs" />
-     <Compile Include="Assets\LevelObjects\Launcher\PullLauncher.cs" />
-     <Compile Include="Assets\LevelObjects\Launcher\PullLauncherDelegate.cs" />
+     <Compile Include="Assets\Global Objects\Game Manager\GameManager.cs" />
+     <Compile Include="Assets\Global Objects\Score\LevelManager.cs" />
+     <Compile Include="Assets\Global Objects\Score\ScoreGiver.cs" />
+     <Compile Include="Assets\Global Objects\Score\ScoreLabel\VanishingLabel.cs" />
+     <Compile Include="Assets\Global Objects\Score\ScoreTraveler.cs" />
+     <Compile Include="Assets\Level Objects\Balls\Ball.cs" />
+     <Compile Include="Assets\Level Objects\Launcher\ClickLauncher.cs" />
+     <Compile Include="Assets\Level Objects\Launcher\PullLauncher.cs" />
+     <Compile Include="Assets\Level Objects\Launcher\PullLauncherDelegate.cs" />
      <Compile Include="Assets\Scipts\Activatable.cs" />
      <Compile Include="Assets\Scipts\Destroyable.cs" />
      <Compile Include="Assets\Scipts\Destroyer.cs" />
@@ -68,7 +69,7 @@
      <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\Temp\TempShader.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
-     <None Include="Assets\rimLighting.shader" />
+     <None Include="Assets\Global Assets\rimLighting.shader" />
      <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\TextureCopy.shader" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
