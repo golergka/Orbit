@@ -1,0 +1,36 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Tutorial/TutorialGoal.cs">
+    <Files>
+      <File FileName="Assets/Tutorial/TutorialController.cs" Line="28" Column="29" />
+      <File FileName="Assets/GlobalObjects/Score/GameController.cs" Line="121" Column="2" />
+      <File FileName="Assets/GlobalObjects/Score/ScoreLabel/VanishingLabel.cs" Line="6" Column="33" />
+      <File FileName="Assets/Scipts/Lifetime.cs" Line="13" Column="25" />
+      <File FileName="Assets/Tutorial/TutorialBall.cs" Line="4" Column="26" />
+      <File FileName="Assets/Tutorial/TutorialGoal.cs" Line="8" Column="43" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="GlobalObjects" expanded="True">
+                <Node name="Score" expanded="True">
+                  <Node name="ScoreLabel" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Scipts" expanded="True" />
+              <Node name="Tutorial" expanded="True">
+                <Node name="TutorialGoal.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
