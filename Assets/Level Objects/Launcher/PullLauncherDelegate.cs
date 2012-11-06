@@ -117,7 +117,6 @@ public class PullLauncherDelegate : MonoBehaviour {
 		rigidbody.AddForce(force, ForceMode.VelocityChange);
 		
 		GetComponent<Ball>().enabled = true;
-		GetComponent<ScoreTraveler>().enabled = true;
 		
 	}
 	

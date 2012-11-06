@@ -48,7 +48,6 @@
      <Compile Include="Assets\Global Objects\Score\LevelManager.cs" />
      <Compile Include="Assets\Global Objects\Score\ScoreGiver.cs" />
      <Compile Include="Assets\Global Objects\Score\ScoreLabel\VanishingLabel.cs" />
-     <Compile Include="Assets\Global Objects\Score\ScoreTraveler.cs" />
      <Compile Include="Assets\Level Objects\Balls\Ball.cs" />
      <Compile Include="Assets\Level Objects\Launcher\ClickLauncher.cs" />
      <Compile Include="Assets\Level Objects\Launcher\PullLauncher.cs" />
@@ -69,6 +68,8 @@
      <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\Temp\TempShader.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\Global Assets\uvPan.shader" />
+     <None Include="Assets\Global Assets\rimLightningTransparent.shader" />
      <None Include="Assets\Global Assets\rimLighting.shader" />
      <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\TextureCopy.shader" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">

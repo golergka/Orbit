@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 	
@@ -8,32 +9,17 @@ public class GameManager : MonoBehaviour {
 	void Awake() {
 		
 		instance = this;
-		DontDestroyOnLoad(this);
 		
 	}
 	
-	void Start() {
-		
-		NextLevel();
-		
-	}
-	
-	private int levelNumber = -1;
-	public string[] levels;
+	public List<string> levels;
 	
 	public void NextLevel() {
 		
-		if ( (levelNumber + 1) >= levels.Length) {
-			Debug.LogError("No more levels!");
-			return;
-		}
+		int nextLevel = levels.IndexOf(Application.loadedLevelName) + 1;
+		if (nextLevel < levels.Count)
+			Application.LoadLevel( levels[nextLevel] );
 		
-		levelNumber++;
-		Application.LoadLevel(levels[levelNumber]);
-		
-	}
-	
-	public void Menu() {
 	}
 	
 }

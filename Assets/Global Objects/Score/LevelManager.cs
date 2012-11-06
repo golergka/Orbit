@@ -166,15 +166,19 @@ public class LevelManager : MonoBehaviour {
 			
 		case GameState.FailMenu:
 			GUI.Label (gameResultRect, gameResultText);
-			if (GUI.Button (new Rect (Screen.width / 2 - 50, Screen.height/2 + 25, 100, 20), "Try again!") )
+			if (GUI.Button (new Rect (Screen.width / 2 - 50, Screen.height/2 + 5, 100, 20), "Try again!") )
 				StartGame();
 			break;
 			
 		case GameState.WinMenu:
 			GUI.Label (gameResultRect, gameResultText);
 			
-			if (GUI.Button (new Rect (Screen.width / 2 - 50, Screen.height/2 + 25, 100, 20), "Next level") )
+			if (GUI.Button (new Rect (Screen.width / 2 - 50, Screen.height/2 + 5, 100, 20), "Next level") )
 				GameManager.instance.NextLevel();
+			
+			if (GUI.Button (new Rect (Screen.width / 2 - 50, Screen.height/2 + 30, 100, 20), "Retry level") )
+				StartGame();
+			
 			
 			break;
 			

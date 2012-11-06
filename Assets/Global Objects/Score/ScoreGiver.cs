@@ -18,13 +18,25 @@ public class ScoreGiver : MonoBehaviour {
 		
 		GameObject collidedWith = collisionInfo.collider.gameObject;
 		
+		GiveScore (collidedWith, collisionInfo.contacts[0].point);
+		
+	}
+	
+	void OnTriggerEnter(Collider other) {
+		
+		GiveScore(other.gameObject, other.transform.position);
+		
+	}
+	
+	void GiveScore(GameObject collidedWith, Vector3 position) {
+		
 		if (gifted.Contains(collidedWith))
 			return;
 		
 		if (collidedWith.tag != "Ball")
 			return;
 		
-		LevelManager.instance.AddScore(50, collisionInfo.contacts[0].point);
+		LevelManager.instance.AddScore(score, position);
 		gifted.Add (collidedWith);
 		
 	}

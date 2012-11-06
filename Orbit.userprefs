@@ -6,6 +6,15 @@
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Global Objects" expanded="True">
+                <Node name="Game Manager" expanded="True" />
+                <Node name="Score" expanded="True" />
+              </Node>
+              <Node name="Level Objects" expanded="True">
+                <Node name="Launcher" expanded="True">
+                  <Node name="PullLauncherDelegate.cs" selected="True" />
+                </Node>
+              </Node>
               <Node name="Scipts" expanded="True" />
               <Node name="Tutorial" expanded="True" />
             </Node>

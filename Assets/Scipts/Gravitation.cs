@@ -35,12 +35,13 @@ public class Gravitation : MonoBehaviour {
 			force.Normalize();
 			
 			float forceAmount = GRV * rb.mass; // float math shit, that's why I'm writing this strange
+			forceAmount *= rigidbody.mass;
 			forceAmount /= distance;
 			forceAmount /= distance;
 			
 			force *= forceAmount;
 			
-			rigidbody.AddForce(force, ForceMode.Acceleration);
+			rigidbody.AddForce(force, ForceMode.Force);
 			
 		}
 	
