@@ -1,6 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scipts/Goal.cs">
+    <Files>
+      <File FileName="Assets/Scipts/Goal.cs" Line="15" Column="11" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
@@ -11,11 +14,12 @@
                 <Node name="Score" expanded="True" />
               </Node>
               <Node name="Level Objects" expanded="True">
-                <Node name="Launcher" expanded="True">
-                  <Node name="PullLauncherDelegate.cs" selected="True" />
-                </Node>
+                <Node name="Balls" expanded="True" />
+                <Node name="Launcher" expanded="True" />
               </Node>
-              <Node name="Scipts" expanded="True" />
+              <Node name="Scipts" expanded="True">
+                <Node name="Goal.cs" selected="True" />
+              </Node>
               <Node name="Tutorial" expanded="True" />
             </Node>
           </Node>
