@@ -22,6 +22,22 @@ public class Gravitation : MonoBehaviour {
 	
 	const float GRV = 1f;
 	
+	public float manualRadius = 1f;
+	float radius {
+		
+		get {
+			
+			SphereCollider sphere = GetComponent<SphereCollider>();
+			if (sphere == null)
+				return manualRadius;
+			else
+				return sphere.radius * transform.lossyScale.x;
+			
+		}
+		
+	}
+	
+	Vector3 gravForce = Vector3.zero;
 	// Update is called once per frame
 	void Update () {
 		
@@ -36,6 +52,16 @@ public class Gravitation : MonoBehaviour {
 			
 			float forceAmount = GRV * rb.mass; // float math shit, that's why I'm writing this strange
 			forceAmount *= rigidbody.mass;
+			
+			if (distance < radius) {
+				forceAmount *= distance;
+				forceAmount /= radius;
+				forceAmount *= distance;
+				forceAmount /= radius;
+				forceAmount *= distance;
+				forceAmount /= radius;
+			}
+			
 			forceAmount /= distance;
 			forceAmount /= distance;
 			
@@ -45,5 +71,10 @@ public class Gravitation : MonoBehaviour {
 			
 		}
 	
+	void OnDrawGizmos() {
+		Gizmos.color = Color.cyan;
+		Gizmos.DrawWireSphere(rigidbody.position, radius);
+		
 	}
+
 }
