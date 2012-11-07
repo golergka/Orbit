@@ -22,6 +22,8 @@ public class Gravitation : MonoBehaviour {
 	
 	const float GRV = 1f;
 	
+	const float MAX_FORCE = 1000f;
+	
 	public float manualRadius = 1f;
 	float radius {
 		
@@ -41,6 +43,11 @@ public class Gravitation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		if (gameObject.isStatic)
+			return;
+		
+		gravForce = Vector3.zero;
+		
 		foreach(Rigidbody rb in agents) {
 			
 			if (rb == rigidbody)
@@ -48,6 +55,10 @@ public class Gravitation : MonoBehaviour {
 			
 			Vector3 force = rb.position - rigidbody.position;
 			float distance = force.magnitude;
+			
+			if (distance == 0)
+				continue;
+			
 			force.Normalize();
 			
 			float forceAmount = GRV * rb.mass; // float math shit, that's why I'm writing this strange
@@ -65,13 +76,25 @@ public class Gravitation : MonoBehaviour {
 			forceAmount /= distance;
 			forceAmount /= distance;
 			
+			if (forceAmount >= MAX_FORCE) {
+				forceAmount = MAX_FORCE;
+				Debug.LogWarning("Exceeding maximum gravity force!");
+			}
+			
 			force *= forceAmount;
 			
-			rigidbody.AddForce(force, ForceMode.Force);
+			gravForce += force;
 			
 		}
+		
+		rigidbody.AddForce(gravForce, ForceMode.Force);
+		
+	}
 	
 	void OnDrawGizmos() {
+		
+		Gizmos.color = Color.grey;
+		Gizmos.DrawLine(rigidbody.position, rigidbody.position + gravForce);
 		Gizmos.color = Color.cyan;
 		Gizmos.DrawWireSphere(rigidbody.position, radius);
 		
