@@ -19,9 +19,6 @@ public class Destroyable : MonoBehaviour {
 	
 	void SelfDestruct(GameObject collidedWith) {
 		
-		if (collidedWith.tag != "Ball")
-			return;
-		
 		gameObject.active = false;
 		
 		if (afterLife != null)
