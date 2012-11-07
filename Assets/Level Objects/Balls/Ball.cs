@@ -27,7 +27,18 @@ public class Ball : MonoBehaviour {
 		
 	}
 	
+	bool quitting = false;
+	
+	void OnApplicationQuit() {
+		
+		quitting = true;
+		
+	}
+	
 	void OnDisable() { // detach the trail
+		
+		if (quitting)
+			return;
 		
 		ballAmount--;
 		trail.transform.parent = null;
