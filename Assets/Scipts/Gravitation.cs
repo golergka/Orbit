@@ -40,8 +40,9 @@ public class Gravitation : MonoBehaviour {
 	}
 	
 	Vector3 gravForce = Vector3.zero;
+	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		
 		if (gameObject.isStatic)
 			return;
