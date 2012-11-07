@@ -113,6 +113,8 @@ public class LevelManager : MonoBehaviour {
 	
 	private void FinishGame() {
 		
+		
+		
 		gameTime = Time.time - startTime;
 		PullLauncher.instance.enabled = false;
 		
@@ -145,6 +147,16 @@ public class LevelManager : MonoBehaviour {
 			WinGame();
 		
 	}
+	
+	#endregion
+	
+	#region Quitting application handling
+	
+//	bool quitting = false;
+//	
+//	void OnApplicationQuit() {
+//		quitting = true;
+//	}
 	
 	#endregion
 	

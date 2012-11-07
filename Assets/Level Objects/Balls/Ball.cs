@@ -35,4 +35,30 @@ public class Ball : MonoBehaviour {
 		
 	}
 	
+	public float selfDestructVelocity = 1f;
+	public float selfDestructTime = 1f;
+	bool selfDestructCountdown = false;
+	float selfDestructStart = 0f;
+	public float velocity;
+	
+	void Update() {
+		
+		velocity = rigidbody.velocity.magnitude;
+		
+		if (selfDestructCountdown) {
+			
+			if (velocity >= selfDestructVelocity)
+				selfDestructCountdown = false;
+			else if (Time.time - selfDestructStart > selfDestructTime)
+				Destroy (gameObject);
+			
+		} else if (velocity < selfDestructVelocity) {
+			
+			selfDestructCountdown = true;
+			selfDestructStart = Time.time;
+			
+		}	
+		
+	}
+	
 }

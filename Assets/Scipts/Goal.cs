@@ -11,8 +11,17 @@ public class Goal : MonoBehaviour {
 
 	void OnDisable() {
 		
+		if (quitting)
+			return;
+		
 		LevelManager.instance.CompleteGoal();
 		
+	}
+	
+	bool quitting = false;
+	
+	void OnApplicationQuit() {
+		quitting = true;
 	}
 	
 }
