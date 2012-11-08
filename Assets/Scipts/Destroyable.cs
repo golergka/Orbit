@@ -7,9 +7,17 @@ public class Destroyable : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collisionInfo) {
 		
-		GameObject collidedWith = collisionInfo.collider.gameObject;
-		if (collidedWith.tag != "Ball")
-			return;
+		SelfDestruct(collisionInfo.collider.gameObject);
+		
+	}
+	
+	void OnTriggerEnter(Collider other) {
+		
+		SelfDestruct(other.gameObject);
+		
+	}
+	
+	void SelfDestruct(GameObject collidedWith) {
 		
 		gameObject.active = false;
 		
@@ -17,4 +25,5 @@ public class Destroyable : MonoBehaviour {
 			Instantiate(afterLife, transform.position, transform.rotation);
 		
 	}
+	
 }
