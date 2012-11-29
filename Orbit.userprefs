@@ -1,8 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scipts/Goal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Level Objects\Launcher\ClickLauncher.cs">
     <Files>
-      <File FileName="Assets/Scipts/Goal.cs" Line="15" Column="11" />
+      <File FileName="Assets\Level Objects\Forcezone\Forcezone.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scipts\Destroyable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scipts\Goal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Global Objects\Score\ScoreGiver.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scipts\Gravitation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Tutorial\TutorialPlanet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Level Objects\Launcher\ClickLauncher.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,11 +21,11 @@
               </Node>
               <Node name="Level Objects" expanded="True">
                 <Node name="Balls" expanded="True" />
-                <Node name="Launcher" expanded="True" />
+                <Node name="Launcher" expanded="True">
+                  <Node name="ClickLauncher.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="Scipts" expanded="True">
-                <Node name="Goal.cs" selected="True" />
-              </Node>
+              <Node name="Scipts" expanded="True" />
               <Node name="Tutorial" expanded="True" />
             </Node>
           </Node>
