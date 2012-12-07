@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_3_5_6;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -44,23 +44,56 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Hard Surface Free\Editor\Reset Fresnel Reflection Value.cs" />
      <Compile Include="Assets\StrumpyShaderEditor\Editor\Scripts\NodeEditorWindow.cs" />
      <Compile Include="Assets\StrumpyShaderEditor\Editor\Scripts\StrumpyPreviewWindow.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Bump.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent Specular.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Specular.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Bump.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\Temp\TempShader.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Bump.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Diffuse.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Bump.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Diffuse.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Specular.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Bump.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Specular.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Bump.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Specular.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent Bump.shader" />
      <None Include="Assets\Global Assets\uvPan.shader" />
      <None Include="Assets\Global Assets\rimLightningTransparent.shader" />
      <None Include="Assets\Global Assets\rimLighting.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Bump.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Specular.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Specular.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface SFX Depth Write Only.shader" />
      <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\TextureCopy.shader" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="Assets\StrumpyShaderEditor\Editor\StrumpyShaderEditor">
  <HintPath>Assets\StrumpyShaderEditor\Editor\StrumpyShaderEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs">
+ <HintPath>\Applications\Unity\Unity.app\Contents\Frameworks\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
